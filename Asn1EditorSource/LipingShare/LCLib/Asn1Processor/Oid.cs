@@ -234,7 +234,7 @@ namespace LipingShare.LCLib.Asn1Processor
             byte b;
             int i=0;
             v = 0;
-            while (true)
+            while (i <= bt.Length)
             {
                 b = (byte) bt.ReadByte();
                 i++;
@@ -243,6 +243,7 @@ namespace LipingShare.LCLib.Asn1Processor
                 if ((b & 0x80) == 0)
                     return i;
             }
+            return i;
         }
 
     }
